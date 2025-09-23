@@ -4,9 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:testapp/core/helpers/spacing.dart';
 import 'package:testapp/core/theming/style.dart';
 import 'package:testapp/core/widgets/app_text_button.dart';
-import 'package:testapp/features/login/data/models/login_request_body.dart';
 import 'package:testapp/features/login/logic/cubit/login_cubit.dart';
-import 'package:testapp/features/login/ui/widgets/Already_have_account_text.dart';
+import 'package:testapp/features/login/ui/widgets/dont_have_account_text.dart';
 import 'package:testapp/features/login/ui/widgets/email_and_password.dart';
 import 'package:testapp/features/login/ui/widgets/login_bloc_listener.dart';
 
@@ -50,12 +49,12 @@ class LoginScreen extends StatelessWidget {
                     AppTextButton(
                       buttonText: 'Login',
                       textStyle: TextStyles.font16whiteSemiBold,
-                      onPressd: () {
-                        validateThenDoLogin(context);
-                      },
+                      
+                        
+                       onPressed: () { validateThenDoLogin(context); },
                     ),
                     verticalSpace(76),
-                    const AlreadyHaveAccountText(),
+                    const DontHaveAccountText(),
                     const LoginBlocListener(),
                   ],
                 ),
@@ -69,12 +68,7 @@ class LoginScreen extends StatelessWidget {
 
   void validateThenDoLogin(BuildContext context) {
     if (context.read<LoginCubit>().formKey.currentState!.validate()) {
-      context.read<LoginCubit>().emitLoginStates(
-        LoginRequestBody(
-          email: context.read<LoginCubit>().emailController.text,
-          password: context.read<LoginCubit>().passwordController.text,
-        ),
-      );
+      context.read<LoginCubit>().emitLoginStates();
     }
   }
 }
