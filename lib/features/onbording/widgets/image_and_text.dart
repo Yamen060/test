@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:testapp/core/theming/style.dart';
 
 class ImageAndText extends StatelessWidget {
@@ -10,18 +9,26 @@ class ImageAndText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        SizedBox(
-          height: 500.h,
-          child: SvgPicture.asset('assets/svgs/loss.svg'),
+        SvgPicture.asset('assets/svgs/docdoc_logo_low_opacity.svg'),
+        Container(
+          foregroundDecoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Colors.white, Colors.white.withOpacity(0.0)],
+              begin: Alignment.bottomCenter,
+              end: Alignment.topCenter,
+              stops: const [0.14, 0.4],
+            ),
+          ),
+          child: Image.asset('assets/images/onboarding_doctor.png'),
         ),
         Positioned(
-          bottom: 10.h,
+          bottom: 30,
           left: 0,
           right: 0,
           child: Text(
-            'Find a Doctor, Make an Appointment',
+            'Best Doctor\nAppointment App',
             textAlign: TextAlign.center,
-            style: TextStyles.font24BlackBold,
+            style: TextStyles.font32BlueBold.copyWith(height: 1.4),
           ),
         ),
       ],

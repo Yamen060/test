@@ -4,6 +4,8 @@ import 'package:testapp/core/routing/app_router.dart';
 import 'package:testapp/core/routing/routs.dart';
 import 'package:testapp/core/theming/colors.dart';
 
+import 'core/helpers/constants.dart';
+
 class DocApp extends StatelessWidget {
   final AppRouter appRouter;
   const DocApp({super.key, required this.appRouter});
@@ -19,9 +21,9 @@ class DocApp extends StatelessWidget {
           primaryColor: ColorsManager.mainBlue,
           scaffoldBackgroundColor: Colors.white,
         ),
-        onGenerateRoute: appRouter.generateRoute,
-        initialRoute: Routes.onBoardingScreen,
         debugShowCheckedModeBanner: false,
+        initialRoute: isLoggedInUser ? Routes.homeScreen : Routes.loginScreen,
+        onGenerateRoute: appRouter.generateRoute,
       ),
     );
   }

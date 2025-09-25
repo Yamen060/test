@@ -26,7 +26,7 @@ class SignupScreen extends StatelessWidget {
                 verticalSpace(8),
                 Text(
                   'Sign up now and start exploring all that our app has to offer. We\'re excited to welcome you to our community!',
-                  style: TextStyles.font14GrayReguler,
+                  style: TextStyles.font14GrayRegular,
                 ),
                 verticalSpace(36),
                 Column(
@@ -35,7 +35,7 @@ class SignupScreen extends StatelessWidget {
                     verticalSpace(40),
                     AppTextButton(
                       buttonText: "Create Account",
-                      textStyle: TextStyles.font16whiteSemiBold,
+                      textStyle: TextStyles.font16WhiteSemiBold,
 
                       onPressed: () {
                         validateThenDoSignup(context);

@@ -17,7 +17,7 @@ class GetStartedButton extends StatelessWidget {
         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
         minimumSize: MaterialStateProperty.all(const Size(300, 50)),
       ),
-      child: Text('Get Started', style: TextStyles.font16whitemedium),
+      child: Text('Get Started', style: TextStyles.font16WhiteMedium),
     );
   }
 }
