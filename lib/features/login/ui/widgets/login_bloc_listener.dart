@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:testapp/core/helpers/extension.dart';
 import 'package:testapp/core/routing/routs.dart';
 import 'package:testapp/core/theming/style.dart';
-import 'package:testapp/features/login/logic/cubit/login_cubit.dart';
-import 'package:testapp/features/login/logic/cubit/login_state.dart';
+import 'package:testapp/features/login/logic/login_cubit.dart';
+import 'package:testapp/features/login/logic/login_state.dart';
 
 import '../../../../core/theming/colors.dart';
 

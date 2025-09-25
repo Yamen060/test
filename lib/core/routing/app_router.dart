@@ -4,7 +4,7 @@ import 'package:testapp/core/di/dependency_injection.dart';
 import 'package:testapp/core/routing/routs.dart';
 import 'package:testapp/features/home/logic/home_cubit.dart';
 import 'package:testapp/features/home/ui/home_screen.dart';
-import 'package:testapp/features/login/logic/cubit/login_cubit.dart';
+import 'package:testapp/features/login/logic/login_cubit.dart';
 import 'package:testapp/features/login/ui/login_screen.dart';
 import 'package:testapp/features/onbording/onbording_screen.dart';
 import 'package:testapp/features/sign_up/logic/cubit/sign_up_cubit.dart';

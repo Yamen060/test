@@ -6,7 +6,7 @@ import 'package:testapp/core/networking/api_result.dart';
 import 'package:testapp/core/networking/dio_factoury.dart';
 import 'package:testapp/features/login/data/models/login_request_body.dart';
 import 'package:testapp/features/login/data/repos/login_repo.dart';
-import 'package:testapp/features/login/logic/cubit/login_state.dart';
+import 'package:testapp/features/login/logic/login_state.dart';
 
 class LoginCubit extends Cubit<LoginState> {
   final LoginRepo _loginRepo;

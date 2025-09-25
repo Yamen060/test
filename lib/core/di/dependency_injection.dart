@@ -7,7 +7,7 @@ import 'package:testapp/core/networking/dio_factoury.dart';
 import 'package:testapp/features/home/data/apis/home_api_service.dart';
 import 'package:testapp/features/home/data/repos/home_repo.dart';
 import 'package:testapp/features/login/data/repos/login_repo.dart';
-import 'package:testapp/features/login/logic/cubit/login_cubit.dart';
+import 'package:testapp/features/login/logic/login_cubit.dart';
 import 'package:testapp/features/sign_up/data/repos/sign_up_repo.dart';
 import 'package:testapp/features/sign_up/logic/cubit/sign_up_cubit.dart';
 
