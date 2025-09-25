@@ -63,3 +63,20 @@ Map<String, dynamic> _$DoctorsToJson(Doctors instance) => <String, dynamic>{
   'appoint_price': instance.price,
   'degree': instance.degree,
 };
+
+LogoutResponseModel _$LogoutResponseModelFromJson(Map<String, dynamic> json) =>
+    LogoutResponseModel(
+      message: json['message'] as String?,
+      data: json['data'] as List<dynamic>?,
+      status: json['status'] as bool?,
+      code: (json['code'] as num?)?.toInt(),
+    );
+
+Map<String, dynamic> _$LogoutResponseModelToJson(
+  LogoutResponseModel instance,
+) => <String, dynamic>{
+  'message': instance.message,
+  'data': instance.data,
+  'status': instance.status,
+  'code': instance.code,
+};

@@ -58,3 +58,22 @@ class Doctors {
   factory Doctors.fromJson(Map<String, dynamic> json) =>
       _$DoctorsFromJson(json);
 }
+@JsonSerializable()
+class LogoutResponseModel {
+  String? message;
+  List<dynamic>? data;  
+  bool? status;
+  int? code;
+
+  LogoutResponseModel({
+    this.message,
+    this.data,
+    this.status,
+    this.code,
+  });
+
+  factory LogoutResponseModel.fromJson(Map<String, dynamic> json) =>
+      _$LogoutResponseModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$LogoutResponseModelToJson(this);
+}

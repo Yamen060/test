@@ -20,17 +20,18 @@ class SpecializationsBlocBuilder extends StatelessWidget {
           current is SpecializationsError,
       builder: (context, state) {
         return state.maybeWhen(
-            specializationsLoading: () {
-              return setupLoading();
-            },
-            specializationsSuccess: (specializationDataList) {
-              var specializationsList = specializationDataList;
-              return setupSuccess(specializationsList);
-            },
-            specializationsError: (errorHandler) => setupError(),
-            orElse: () {
-              return const SizedBox.shrink();
-            });
+          specializationsLoading: () {
+            return setupLoading();
+          },
+          specializationsSuccess: (specializationDataList) {
+            var specializationsList = specializationDataList;
+            return setupSuccess(specializationsList);
+          },
+          specializationsError: (errorHandler) => setupError(),
+          orElse: () {
+            return const SizedBox.shrink();
+          },
+        );
       },
     );
   }

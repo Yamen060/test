@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:testapp/core/theming/colors.dart';
 import 'package:testapp/core/theming/style.dart';
+import 'package:testapp/features/home/ui/widgets/logout_button.dart';
 
 class HomeTopBar extends StatelessWidget {
   const HomeTopBar({super.key});
@@ -18,6 +19,7 @@ class HomeTopBar extends StatelessWidget {
           ],
         ),
         const Spacer(),
+        LogoutButton(),
         CircleAvatar(
           radius: 24.0,
           backgroundColor: ColorsManager.moreLighterGray,

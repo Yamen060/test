@@ -13,5 +13,6 @@ class ApiErrorModel {
 
   Map<String, dynamic> toJson() => _$ApiErrorModelToJson(this);
 }
+
 //تعليمة generate
 //dart run build_runner build --delete-conflicting-outputs

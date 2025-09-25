@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:testapp/core/helpers/extension.dart';
@@ -6,9 +7,6 @@ import 'package:testapp/core/theming/colors.dart';
 import 'package:testapp/core/theming/style.dart';
 import 'package:testapp/features/sign_up/logic/cubit/sign_up_cubit.dart';
 import 'package:testapp/features/sign_up/logic/cubit/sign_up_state.dart';
-
-
-
 
 class SignupBlocListener extends StatelessWidget {
   const SignupBlocListener({super.key});
@@ -86,7 +84,7 @@ class SignupBlocListener extends StatelessWidget {
         ),
         content: Text(
           error,
-          style: TextStyles.font14DarkBlueMedium,
+          style: TextStyles.font15DarkBlueMedium,
         ),
         actions: [
           TextButton(
@@ -95,7 +93,7 @@ class SignupBlocListener extends StatelessWidget {
             },
             child: Text(
               'Got it',
-              style: TextStyles.font13BlueSemiBold,
+              style: TextStyles.font14BlueSemiBold,
             ),
           ),
         ],

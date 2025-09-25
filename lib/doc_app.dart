@@ -6,10 +6,15 @@ import 'package:testapp/core/theming/colors.dart';
 
 import 'core/helpers/constants.dart';
 
-class DocApp extends StatelessWidget {
+class DocApp extends StatefulWidget {
   final AppRouter appRouter;
   const DocApp({super.key, required this.appRouter});
 
+  @override
+  State<DocApp> createState() => _DocAppState();
+}
+
+class _DocAppState extends State<DocApp> {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
@@ -23,7 +28,7 @@ class DocApp extends StatelessWidget {
         ),
         debugShowCheckedModeBanner: false,
         initialRoute: isLoggedInUser ? Routes.homeScreen : Routes.loginScreen,
-        onGenerateRoute: appRouter.generateRoute,
+        onGenerateRoute: widget.appRouter.generateRoute,
       ),
     );
   }

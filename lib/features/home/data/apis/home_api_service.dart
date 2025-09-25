@@ -13,4 +13,7 @@ abstract class HomeApiService {
 
   @GET(HomeApiConstants.specializationEP)
   Future<SpecializationsResponseModel> getSpecialization();
+  @POST(ApiConstants.logout)
+Future<LogoutResponseModel> logout();
+
 }
